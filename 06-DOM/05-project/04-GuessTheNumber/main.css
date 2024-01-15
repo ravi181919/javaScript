@@ -1,0 +1,60 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+html,body
+{
+    height: 100%;
+    width: 100%;
+    background: #212121;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main
+{
+    height: 400px;
+    width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    background: #000;
+    border-radius: 5px;
+}
+.head h1, .form h1
+{
+  font-size: 30px;
+  color: #fff;
+}
+.paragraph p 
+{
+    font-size: 12px;
+    color: #fff;
+}
+.previousAndRemainingGuesses 
+{
+    margin: 15px;
+    font-size: 12px;
+    color: #fff;
+}
+.form
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+.form input
+{
+    border: none;
+    color: #000;
+    padding: 5px 15px;
+    outline: none;
+    border-radius: 5px;
+}

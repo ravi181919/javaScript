@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01-Basc Of Events</title>
+</head>
+<body style="display: flex; align-items: center;
+justify-content: center; flex-direction: column;">
+      <h2>Images Collection</h2>
+      <div>
+        <ul style="display: flex; gap: 50px;">
+
+            <!-- method no 1  -->
+            <!-- onClick=''   its not refer to use-->
+            <li><img id="road" src="https://images.pexels.com/photos/1546901/pexels-photo-1546901.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="image" height="150px" width="250px"></li>
+            <li><img id="moon" src="https://images.pexels.com/photos/884788/pexels-photo-884788.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="image" height="150px" width="250px"></li>
+            <li><img id="treeWithsunset" src="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&w=600" alt="" class="image" height="150px" width="250px"></li>
+            <li><img id="treeWithmoon" src="https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" class="image" height="150px" width="250px"></li>
+        </ul>
+      </div>
+    <script>
+        // method no 2
+        // document.getElementById('road').onclick = function(){
+        //     alert('helo');
+        // }  // not give more features
+        
+        // attachEnevt()
+        // jQuery = onEvent
+
+
+
+        // method no 3 
+        document.querySelector('#road').addEventListener('click', (e) => {
+            console.log(e);
+        }, false);   // refer to use  
+
+    
+    </script>
+</body>
+</html>

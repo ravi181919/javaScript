@@ -1,0 +1,165 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+html,body
+{
+    height: 100%;
+    width: 100%;
+    background: #212121;
+    color: #fff;
+}
+#main
+{
+    height: 100vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+}
+#formForBMI
+{
+    height: 450px;
+    width: 400px;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 10px 1px #ffffff6b, 0 0 5px 1px #ffff;
+            box-shadow: inset 0 0 10px 1px #ffffff6b, 0 0 5px 1px #ffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+}
+label
+{
+    font-size: 14px;
+}
+.measurment
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+}
+#weightInKG, #heightInCM
+{
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #212121;
+    color: #fff;
+    -webkit-box-shadow: 0 0 1px 1px #86d385;
+            box-shadow: 0 0 1px 1px #86d385;
+    margin-left: 10px;
+
+}
+.result
+{
+    height: 40px;
+    width: 90%;
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.BMIguide
+{
+    margin-right: 80px;
+}
+.guide
+{
+    font-size: 14px;
+    margin: 10px;
+}
+button
+{
+    cursor: pointer ;
+    padding: 5px 25px;
+    border-radius: 5px;
+    color: #fff;
+    background: #212121;
+    border: none;
+    -webkit-box-shadow: inset 0 0 10px 1px #86d385, 0 0 5px 1px #695c5c ;
+            box-shadow: inset 0 0 10px 1px #86d385, 0 0 5px 1px #695c5c ;
+    margin-top: 15px;
+}
+h1
+{
+    font-size: 20px;
+    color:#b35e5e;
+    margin:10px;
+    margin-left: 10px;
+}
+
+/*************************************** media Query *****************************/
+/* For screens up to 425px */
+@media (max-width: 425px) {
+    #formForBMI {
+        width: 90%;
+    }
+    #weightInKG, #heightInCM {
+        width: 100%;
+        margin-left: 0;
+    }
+    .result {
+        width: 100%;
+    }
+    .BMIguide {
+        margin-right: 20px; /* Adjust as needed */
+    }
+}
+
+/* For screens between 426px and 750px */
+@media (min-width: 426px) and (max-width: 750px) {
+    #formForBMI {
+        width: 80%;
+    }
+}
+
+/* For screens between 751px and 999px */
+@media (min-width: 751px) and (max-width: 999px) {
+    #formForBMI {
+        width: 70%;
+    }
+}
