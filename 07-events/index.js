@@ -1,24 +1,33 @@
- // attachEnevt()
-        // jQuery = onEvent
+/******************************************* Events  to most for you *********************************************
+ * 
+ * type , timestamp, preventDefault, target , toElement, srcElement, currenttarget, ClientX, ClientY,
+ * screenX, screenY, altKey, ctrlKey, shiftKey, keyCode, and more.
+ *  
+ ****************************************************************************************************************/
 
-        // method no 2
-      /* 
-       document.getElementById('road').onclick = function(){
-            alert('helo');
-        }  // not give more features
-         */
+/********************** previous javaScript eventListner and jQuery **************************************
+ attachEnevt()
+ jQuery = onEvent
+************************************** only for knowledge ************************************************/
+
+
+// method no 2
+/* 
+document.getElementById('road').onclick = function(){
+alert('helo');
+}  // not give more features
+*/
         
 
-        // method no 3 
-       /*
-        document.querySelector('#road').addEventListener('click', (e) => {
-            console.log(e);
-        }, false);   // refer to use it 
-         */
-
+// method no 3 
+/*
+document.querySelector('#road').addEventListener('click', (e) => {
+console.log(e);
+}, false);   // refer to use it 
+*/
 
 /*
-**************************** EventPropagation =>  Bubbling(False) and capturing(true) ****************************
+******************** EventPropagation =>  Bubbling(False) and capturing(true) ****************
 syntax=> .addEventListener('eventName', callBackfunction, flase Or true)
 **/
 
@@ -62,16 +71,22 @@ document.getElementById('moon').addEventListener('click',(e) => {
  */
 
 const ul = document.querySelector('#image')
+
 ul.addEventListener('click', (e) => 
 {
+
     if( e.target.tagName === 'IMG')
     {
         let removeClickedImage = e.target.parentNode
-        // removeClickedImage.remove();
-        removeClickedImage.parentNode.removeChild(removeClickedImage); // Method No. => 2 
+
+        removeClickedImage.remove(); // mthod no. => 1 
+
+        // removeClickedImage.parentNode.removeChild(removeClickedImage); // Method No. => 2 
     }
+
     if(e.target.tagName === 'A')  // to stop default behavior of the element 
     {
       e.preventDefault();
     }
+
 },false)
