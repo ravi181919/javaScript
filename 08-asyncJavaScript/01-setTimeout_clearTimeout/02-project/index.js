@@ -28,3 +28,5 @@ document.querySelector('#startButton').addEventListener('click', () => {
 document.querySelector('#stopButton').addEventListener('click', () => {
     timeouts.forEach(clearTimeout); 
 });
+
+
