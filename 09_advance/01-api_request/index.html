@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request</title>
+</head>
+<body>
+
+     <script>
+
+        const body = document.querySelector('body');
+        const container = document.createElement('div');
+        const img = document.createElement('img');
+        const followerCounter = document.createElement('p');
+
+        body.style.backgroundColor = '#000'
+        body.appendChild(container)
+        container.appendChild(img)
+        container.appendChild(followerCounter)
+
+        body.style.minHeight = '100vh'
+        body.style.minWidth = '100%'
+        body.style.margin = '0'
+        body.style.display = 'flex'
+        body.style.alignItems = 'center'
+        body.style.justifyContent = 'center'
+
+        container.style.height = "210px"
+        container.style.width = "200px"
+        container.style.backgroundColor = "#212121"
+        container.style.borderRadius = "5px"
+        container.style.overflow = 'hidden'
+        container.style.padding = '10px 0'
+        container.style.display = 'flex'
+        container.style.flexDirection = 'column'
+        container.style.alignItems = 'center'
+        container.style.justifyContent = 'center'
+        
+        img.style.height = '175px'
+        img.style.width = '200px'
+      
+        followerCounter.style.padding = '5px 20px'
+        followerCounter.style.borderRadius = '5px'
+        followerCounter.style.fontSize = '18px'
+        followerCounter.style.fontWeight = '700'
+        followerCounter.style.backgroundColor = '#000'
+        followerCounter.style.color = '#fff'
+
+        const requestURL = 'https://api.github.com/users/ravi181919'   // it is  limited time 
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', requestURL)
+
+        xhr.onreadystatechange = function(){
+            console.log(xhr.readyState)
+            if (xhr.readyState === 4)
+            {
+                const convertDataInJSON = JSON.parse(this.responseText)
+                img.src = convertDataInJSON.avatar_url
+                followerCounter.innerHTML = convertDataInJSON.followers
+            }
+        }
+        xhr.send();
+     </script>
+</body>
+</html>
+<!-- Value	State	              Description
+0	    UNSENT	              Client has been created. open() not called yet.
+1	    OPENED	              open() has been called.
+2	    HEADERS_RECEIVED      send() has been called, and headers and status are available.
+3	    LOADING	              Downloading; responseText holds partial data.
+4	    DONE	              The operation is complete. -->
