@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>API Request</title>
+    <title>API Request and mini_project</title>
 </head>
 <body>
 
@@ -47,19 +47,26 @@
         followerCounter.style.backgroundColor = '#000'
         followerCounter.style.color = '#fff'
 
-        const requestURL = 'https://api.github.com/users/ravi181919'   // it is  limited time 
+
+        //  api request => 
+        const requestURL = 'https://api.github.com/users/ravi181919' 
         const xhr = new XMLHttpRequest();
         xhr.open('GET', requestURL)
 
         xhr.onreadystatechange = function(){
-            console.log(xhr.readyState)
-            if (xhr.readyState === 4)
+    
+            if (xhr.readyState)
             {
                 const convertDataInJSON = JSON.parse(this.responseText)
                 img.src = convertDataInJSON.avatar_url
                 followerCounter.innerHTML = convertDataInJSON.followers
             }
-        }
+
+            // if(xhr.readyState)
+            // {
+            //     console.log(xhr.readyState);
+            // }
+             }
         xhr.send();
      </script>
 </body>
