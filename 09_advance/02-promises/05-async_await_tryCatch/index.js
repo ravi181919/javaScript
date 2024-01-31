@@ -1,5 +1,5 @@
-// async await 
-
+// asyncAwait and tryCtach
+   
 const promiseFive = new Promise((resolve , reject) => 
 {
     setTimeout(() =>

@@ -1,0 +1,8 @@
+// resolve bassed  example  : ===
+new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve({userName:'ravi', email: 'rg@gmail'}); 
+    },1000)
+}).then((user) => {
+    console.log(user);
+})
