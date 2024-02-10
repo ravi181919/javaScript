@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+    <button id="yellow">yellow</button>
+    <button id="blue">blue</button>
+</head>
+<body>
+    <script>
+
+        // //refer to not use, when you changed more color 
+        // document.getElementById('yellow').onclick = function(){
+        //     document.body.style.backgroundColor = 'Yellow'
+        // }
+        // document.getElementById('blue').onclick = function(){
+        //     document.body.style.backgroundColor = 'Blue'
+        // }
+
+        // //  this code is auto execute
+        // function clickHandler(color)
+        // {
+        //     document.body.style.backgroundColor = `${color}`
+        // }
+        // document.getElementById('yellow').onclick = clickHandler('yellow')
+        // document.getElementById('blue').onclick = clickHandler('blue')
+
+        // // By using lexical scoping and closure
+
+        function clickHandler(color)
+        {
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+        document.getElementById('yellow').onclick = clickHandler('yellow')
+        document.getElementById('blue').onclick = clickHandler('blue')
+
+    </script>
+</body>
+</html>

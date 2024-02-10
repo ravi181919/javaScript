@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical Scoping</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function init(){
+        let init = 'parent'
+        // console.log(Inner);
+        function inner(){
+            let Inner = 'brother'
+            console.log(init);
+        }
+        function secondInner() {
+            // console.log(Inner);
+            console.log(init);
+        }
+        inner();
+        secondInner();
+    }
+    init();
+</script>
+</html>
